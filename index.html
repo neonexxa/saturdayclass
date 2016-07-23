@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>appsabtu</title>
+
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		
+		
+
+	</head>
+	<body>
+
+		<div id="app">
+
+			<div class="container">
+
+
+			<title headtajuk="My First Vue" badantajuk="this is my vue."></title>
+
+				<div class="row">
+
+					<div class="col-md-6"><!-- separuh -->
+						<btnbyk2 datadlmbutton="Primary" ></btnbyk2>
+						<btnbyk2 datadlmbutton="2nd"></btnbyk2>
+						<btnbyk2 datadlmbutton="3rd"></btnbyk2>
+						<btnbyk2 datadlmbutton="4th"></btnbyk2>
+
+					</div>
+
+					<div class="col-md-6"><!-- separuh -->
+						<iframe width="100%" height="auto" src="https://www.youtube.com/embed/yO-oZo6gK4Q" frameborder="0" allowfullscreen></iframe>
+					</div>
+
+
+				</div>	
+			</div>
+
+
+
+		</div>
+
+
+
+
+
+
+
+<template id="buttonsaya">
+	<button type="button" class="btn btn-primary col-md-12">{{ datadlmbutton }}</button>
+</template>
+
+<template id="tajuk">
+	<div class="text-center">
+		<h1>{{ headtajuk }}</h1>
+		<p> {{ badantajuk }}</p>
+	</div>
+</template>
+
+
+
+	<!-- begin vue here -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+
+	<script type="text/javascript">
+
+	Vue.component('btnbyk2',
+	{
+		template : '#buttonsaya',
+		props : ['datadlmbutton'],
+	});
+	Vue.component('title',
+	{
+		template : '#tajuk',
+		props : ['headtajuk','badantajuk'],
+	});
+
+
+		new Vue({
+				
+				el : '#app'
+
+				});
+	</script>
+
+
+
+
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
